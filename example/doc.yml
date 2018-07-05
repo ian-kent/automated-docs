@@ -1,0 +1,34 @@
+---
+
+title: Digital Publishing development environment setup
+steps:
+
+  - title: Install Java 1.8.0_101
+    description: >
+      Java is required for our legacy services (e.g. babbage and zebedee), 
+      and is also used by some newer services (e.g. dp-dataset-exporter-xlsx)
+    test: java -version
+    expected: java version "1.8.0_101"
+    install: brew cask install java
+
+  - title: Install Go 1.10
+    description: >
+      Go is required for most of our newer services
+    test: go version
+    expected: go version go1.10.2 darwin/amd64
+    install: brew install go
+
+  - title: Install Node v7.2.0
+    description: >
+      Node is required for sixteens (our pattern library), and our javascript services (e.g. florence)
+    test: node -v
+    expected: v7.2.0
+    install: brew install node
+
+  - title: Install Maven
+    description: >
+      Maven is a Java package manager, and is used by most of our Java services
+    test: mvn -v
+    expected: Apache Maven 3.3.9
+    install: brew install maven
+    
