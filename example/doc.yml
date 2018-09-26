@@ -15,7 +15,7 @@ steps:
     description: >
       Go is required for most of our newer services
     test: go version
-    expected: go version go1.10.2 darwin/amd64
+    expected: go version go1\.10(\.\d)? darwin/amd64
     install: brew install go
 
   - title: Install Node v7.2.0
