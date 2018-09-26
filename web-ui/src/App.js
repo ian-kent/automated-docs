@@ -104,7 +104,7 @@ class App extends Component {
             <Row>
               <Col s={3} />
               <Col s={6}>
-                <ProgressBar progress={ this.state.doc.total_steps / this.state.doc.completed_steps * 100 } />
+                <ProgressBar progress={ this.state.doc.completed_steps / this.state.doc.total_steps * 100 } />
               </Col>
               <Col s={3} />  
             </Row>
